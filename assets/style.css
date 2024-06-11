@@ -1,0 +1,42 @@
+body {
+  background-color: #000814;
+  font-family: "Roboto", sans-serif;
+  color: #eeeeee;
+}
+
+.p-titulo {
+  padding: 2em 0em;
+  margin: 0em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5em;
+}
+.p-titulo h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 2em;
+  margin: 0;
+}
+.p-titulo h3 > strong {
+  color: #FFC300;
+}
+
+.navbar {
+  display: flex;
+  justify-content: end;
+  width: 90vw;
+}
+
+.nav-element {
+  padding: 1em;
+  margin: 1em;
+  border-bottom: 0.2em solid #000814;
+}
+
+.nav-element:hover {
+  transition: linear 0.1s;
+  border-bottom: 0.2em solid #FFC300;
+}
+
+/*# sourceMappingURL=style.css.map */
