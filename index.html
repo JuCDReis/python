@@ -1,28 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Programming</title>
     <link rel="stylesheet" href="./assets/style.css">
-    <link rel="shortcut icon" href="./assets/fav-icon.svg" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <title>Python - Acessibilidade Digital</title>
 </head>
-<body >
+<body>
     <header>
-        <nav class="navbar">
-            <div class="nav-element">Introdução</div>
-            <div class="nav-element">Exercícios</div>
-            <div class="nav-element">Jogo</div>
-        </nav>
+        <h1>Python </h1>
+        <h3>Programação Simplificada, <strong>Soluções Ilimitadas</strong></h3>
+        <button id="theme-toggle" class="btn">Modo Escuro</button>
     </header>
-    <div class="p-titulo">
-        <h1>PYTHON</h1>
-        <h3>Programação Simplificada, <strong> Soluções Ilimitadas</strong></h3>
-    </div>
-    
+    <main>
+        <section id="about">
+            <h2>Sobre Python</h2>
+            <p>Python é uma linguagem de programação interpretada, de alto nível e com uma sintaxe fácil de aprender. Ela suporta múltiplos paradigmas de programação e possui uma vasta comunidade de desenvolvedores.</p>
+        </section>
+        <section id="examples">
+            <h2>Exemplos de Exercícios Simples</h2>
+            <article>
+                <h3>Exemplo 1: Olá, Mundo!</h3>
+                <pre><code>print("Olá, Mundo!")</code></pre>
+            </article>
+            <article>
+                <h3>Exemplo 2: Soma de Dois Números</h3>
+                <pre><code>
+# Solicita ao usuário para inserir dois números
+num1 = input("Digite o primeiro número: ")
+num2 = input("Digite o segundo número: ")
 
+# Soma os números e exibe o resultado
+soma = float(num1) + float(num2)
+print("A soma é:", soma)
+                </code></pre>
+            </article>
+            <article>
+                <h3>Exemplo 3: Loop Simples</h3>
+                <pre><code>
+for i in range(5):
+    print("Número", i)
+                </code></pre>
+            </article>
+        </section>
+    </main>
+    <script src="./assets/script.js"></script>
 </body>
 </html>
