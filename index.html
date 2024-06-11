@@ -10,7 +10,22 @@
     <header>
         <h1>Python </h1>
         <h3>Programação Simplificada, <strong>Soluções Ilimitadas</strong></h3>
-        <button id="theme-toggle" class="btn">Modo Escuro</button>
+        <nav class="options">
+            <button id="theme-toggle" class="btn">Modo Escuro</button>
+            <select id="color-filter" class="filters-input btn">
+                <option class="option-select" value="default">Cores padrão</option>
+                <option class="option-select" value="achromatomaly">Acromatopsia</option>
+                <option class="option-select" value="deuteranomaly">Deuteranomalia</option>
+                <option class="option-select" value="tritanomaly">Tritanomalia</option>
+                <option class="option-select" value="acromatomia">Acromatomia</option>
+                <option class="option-select" value="deutenopia">Deuteranopia</option>
+                <option class="option-select" value="protanopia">Protanopia</option>
+            </select>
+            <div id="conf-fonte" class="fonte-mexer btn">
+                <div id="fonte" class="fonte">Aa
+                </div>
+            </div>
+        </nav>
     </header>
     <main>
         <section id="about">
@@ -44,6 +59,14 @@ for i in range(5):
             </article>
         </section>
     </main>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper></div>
+            <div class="vw-plugin-top-wrapper"></div>
+    </div></div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script> new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
     <script src="./assets/script.js"></script>
 </body>
 </html>

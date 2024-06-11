@@ -47,7 +47,7 @@ header > h3 > strong{
     border-radius: 0.5em;
     color: var(--text-color-light);
     cursor: pointer;
-    margin-top: 1em;
+    margin: 1em;
     padding: 0.5em 1em;
 }
 
@@ -59,6 +59,32 @@ header > h3 > strong{
 .dark header {
     color: var(--background-color-light);
 }
+
+.options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.6em;
+}
+.option-select{
+    border: 2px solid var(--text-color-light);
+    border-radius: 0.5em;
+    color: var(--text-color-light);
+    cursor: pointer;
+    margin: 1em;
+    padding: 0.5em 1em;
+}
+
+.fonte{
+    display: flex;
+    justify-content: center;
+}
+.conf-fonte{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 
 main {
     padding: 2em;
@@ -78,3 +104,29 @@ pre {
 .dark pre {
     background-color: #333;
 }
+
+/* Estilos para diferentes filtros de daltonismo */
+.filter-image.achromatomaly {
+    filter: grayscale(100%);
+}
+
+.filter-image.deuteranomaly {
+    filter: hue-rotate(180deg);
+}
+
+.filter-image.tritanomaly {
+    filter: sepia(100%) saturate(300%) hue-rotate(-50deg);
+}
+
+.filter-image.acromatomia {
+    filter: grayscale(50%);
+}
+
+.filter-image.deuteranopia {
+    filter: grayscale(75%) sepia(100%) hue-rotate(45deg);
+}
+
+.filter-image.protanopia {
+    filter: sepia(35%) saturate(100%);
+}
+
