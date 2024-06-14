@@ -18,46 +18,48 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 });
 
-
-
 const tamFonte = document.getElementById('conf-fonte');
+const navBar = document.getElementById('options');
 const fonte = document.getElementById('fonte');
 
-tamFonte.addEventListener('click', function(){
-    console.log('inicio');
+let fontSizeControl = null; // store the dynamically added element
 
-    if(tamFonte.classList.contains('fonte-mexer')){
-        console.log('testeIf');
-        tamFonte.classList.remove('fonte-mexer');
-        tamFonte.innerHTML += `   
-    <div class="fonte-mexer">
-        <button id="aumentar" class="btn-fonte btn">+</button>
-        <button id="diminuir" class="btn-fonte btn">-</button>
-    </div>
-    `
-    document.getElementById('aumentar').addEventListener('click', function(){
-        console.log('teste botao+');
-        changeFontSize(1)}
-        );
-    document.getElementById('diminuir').addEventListener('click', function(){
-        console.log('teste botao-');
-        changeFontSize(-1)
+tamFonte.addEventListener('click', function() {
+  console.log('inicio');
+
+  if (tamFonte.classList.contains('fonte-mexer')) {
+    console.log('testeIf');
+    tamFonte.classList.remove('fonte-mexer');
+    if (fontSizeControl) {
+      fontSizeControl.remove(); // remove the dynamically added element
     }
-    );
-    }else{
-        console.log('testeElse')
-        tamFonte.classList.add('fonte-mexer');
-        tamFonte.innerHTML = `
-        <div id="fonte" class="fonte">aA
-                </div>
-    `};
+  } else {
+    console.log('testeElse');
+    tamFonte.classList.add('fonte-mexer');
+    fontSizeControl = document.createElement('div');
+    fontSizeControl.className = 'fonte-mexer';
+    fontSizeControl.innerHTML = `
+      <button id="aumentar" class="btn-fonte btn">+</button>
+      <button id="diminuir" class="btn-fonte btn">-</button>
+    `;
+    navBar.appendChild(fontSizeControl);
 
-function changeFontSize(step){
-    var fontSize = parseFloat(getComputedStyle(document.body).fontSize);
-    var newFontSize = fontSize + step;
-    document.body.style.fontSize = newFontSize + 'px';
-}
+    document.getElementById('aumentar').addEventListener('click', function() {
+      console.log('teste botao+');
+      changeFontSize(1);
+    });
+    document.getElementById('diminuir').addEventListener('click', function() {
+      console.log('teste botao-');
+      changeFontSize(-1);
+    });
+  }
 });
+
+function changeFontSize(step) {
+  var fontSize = parseFloat(getComputedStyle(document.body).fontSize);
+  var newFontSize = fontSize + step;
+  document.body.style.fontSize = newFontSize + 'px';
+}
 
 // Adiciona um evento de mudança ao elemento com o id 'color-filter'
 document.getElementById('color-filter').addEventListener('change', function() {

@@ -1,9 +1,11 @@
 :root {
     --background-color-light: #eeeeee;
-    --background-color-dark: #000814;
+    --background-color-dark: #001d3d;
+    --background-secondary: #003566;
     --text-color-light: #000814;
     --text-color-dark: #ffffff;
     --primary-color: #FFC300;
+    --highlights: #ffd60a;
 }
 
 body.light {
@@ -20,7 +22,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    transition: background-color 0.3s, color 0.3s;
+
 }
 
 header {
@@ -90,7 +92,7 @@ main {
     padding: 2em;
 }
 
- h2 {
+ h1 {
     color: var(--primary-color);
 }
 
@@ -130,3 +132,86 @@ pre {
     filter: sepia(35%) saturate(100%);
 }
 
+
+.about{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 2em 4em;
+  line-height: 1.5em;
+}
+.about-left{
+    display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1em;
+  font-size: 1.2em;
+
+}
+.principios{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+.principio{
+    background-color: var(--background-secondary) ;
+    color:#fff;
+    margin:1em;
+    padding: 1em 0em 1em 1em;
+    border-radius: 0.5em;
+    border: solid 0.3em #40799e;
+    clip-path: polygon(0 0,100% 0,100% calc(100% - 25px),calc(100% - 25px) 100%,0 100%);
+}
+
+.principio > h3{
+    text-transform: uppercase;
+    font-size: 1.3em;
+}
+
+
+.p1 >h3 {
+    color: var(--highlights);
+}
+
+.p1:hover{
+    border: solid 0.3em var(--highlights);
+    transition: 0.3s;
+
+}
+
+.mais{
+    font-size: 1.2em;
+    margin: 4em;    
+}
+.links{
+    display: flex;
+    justify-content: space-between;
+}
+.saiba-mais{
+    background-color: var(--background-secondary);
+  border: solid 0.3em #40799e;
+  border-radius: 0.5em;
+  color: #fff;
+  margin-right: 2em;
+  padding: 2em ;
+}
+.saiba-mais > h3{
+    color: var(--highlights);
+}   
+
+.saiba-mais:hover{
+    border: solid 0.3em var(--highlights);
+    transition: 0.3s;
+
+}
+
+.btn-link{
+    background-color: var(--highlights);
+    color: var(--text-color-light);
+    border: 0em;
+    border-radius: 0.5em;
+    padding: 1em 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
