@@ -195,30 +195,38 @@ pre {
 
 .saiba-mais{
     background-color: var(--background-secondary);
-  border: solid 0.3em #40799e;
-  border-radius: 0.5em;
-  color: #fff;
-  margin-right: 2em;
-  padding: 2em ;
+    border: solid 0.3em #40799e;
+    border-radius: 0.5em;
+    color: #fff;
+    margin-right: 2em;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40vw;
 }
 
-.saiba-mais > h3{
+.saiba-mais img {
+    width: 5em;
+    margin-right:1.5em;
+}
+
+.saiba-mais-right > h3{
     color: var(--highlights);
 }   
 
 .saiba-mais:hover{
     border: solid 0.3em var(--highlights);
     transition: 0.3s;
-
 }
 
 .btn-link{
-    background-color: var(--highlights);
-    color: var(--text-color-light);
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
     border: 0em;
     border-radius: 0.5em;
     padding: 1em 1.5em;
-    font-weight: bold;
+    font-weight: 550;
     text-transform: uppercase;
     font-size: 0.8em;
 }
