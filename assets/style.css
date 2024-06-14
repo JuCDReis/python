@@ -1,5 +1,5 @@
 :root {
-    --background-color-light: #eeeeee;
+    --background-color-light: #d9d9d9;
     --background-color-dark: #001d3d;
     --background-secondary: #003566;
     --text-color-light: #000814;
@@ -87,12 +87,11 @@ header > h3 > strong{
     justify-content: center;
 }
 
-
-main {
-    padding: 2em;
+ h1 {
+    color: var(--background-secondary);
 }
 
- h1 {
+.dark h1{
     color: var(--primary-color);
 }
 
@@ -181,12 +180,19 @@ pre {
 
 .mais{
     font-size: 1.2em;
-    margin: 4em;    
+    margin: 4em 0em; 
+    background-color: var(--background-secondary);  
+    padding: 4em; 
+}
+.mais h1{
+    color: var(--background-color-light);
+    text-transform: uppercase;
 }
 .links{
     display: flex;
     justify-content: space-between;
 }
+
 .saiba-mais{
     background-color: var(--background-secondary);
   border: solid 0.3em #40799e;
@@ -195,6 +201,7 @@ pre {
   margin-right: 2em;
   padding: 2em ;
 }
+
 .saiba-mais > h3{
     color: var(--highlights);
 }   
