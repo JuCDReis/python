@@ -244,6 +244,7 @@ pre {
 .how-to {
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 .how-to > img {
     width: 30vw;
