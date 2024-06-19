@@ -329,3 +329,19 @@ pre {
     padding: 1em;
     font-size: 1.2em;
 }
+
+.project{
+    background-color: var(--background-secondary);
+    border: solid 0.3em #40799e;
+    border-radius: 0.5em;
+    color: #fff;
+    margin:4em;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.project:hover{
+    border: solid 0.3em var(--highlights);
+    transition: 0.3s;
+}
