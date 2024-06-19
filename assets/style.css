@@ -96,14 +96,14 @@ header > h3 > strong{
 }
 
 pre {
-    background-color: #f4f4f4;
+    background-color: var(--background-color-dark);
     border-left: 4px solid var(--primary-color);
     padding: 1em;
     white-space: pre-wrap;
 }
 
 .dark pre {
-    background-color: #333;
+    background-color: var(--background-color-dark);
 }
 
 /* Estilos para diferentes filtros de daltonismo */
@@ -183,14 +183,17 @@ pre {
     margin: 4em 0em; 
     background-color: var(--background-secondary);  
     padding: 4em; 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
-.mais h1{
-    color: var(--background-color-light);
-    text-transform: uppercase;
+
+.mais > img{
+    width: 40vw;
 }
 .links{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
 .saiba-mais{
@@ -198,17 +201,12 @@ pre {
     border: solid 0.3em #40799e;
     border-radius: 0.5em;
     color: #fff;
-    margin-right: 2em;
-    padding: 2em;
+    margin-bottom: 1em;
+    padding: 1em 2em;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 40vw;
-}
-
-.saiba-mais img {
-    width: 5em;
-    margin-right:1.5em;
+    width: 30vw;
 }
 
 .saiba-mais-right > h3{
@@ -225,8 +223,109 @@ pre {
     color: var(--text-color-dark);
     border: 0em;
     border-radius: 0.5em;
-    padding: 1em 1.5em;
+    padding: 0.5em 1em;
     font-weight: 550;
     text-transform: uppercase;
     font-size: 0.8em;
+}
+
+/* exercises */
+
+.exercicios{
+    padding: 0em 5em;
+    font-size: 1.2em;
+}
+
+.exercicios > h1{
+    font-size: 2.5em;
+    color: var(--highlights);
+}
+
+.how-to {
+    display: flex;
+    justify-content: space-between;
+}
+.how-to > img {
+    width: 30vw;
+}
+
+.passo{
+    border-left: var(--highlights) solid 0.5em;
+    display: flex;
+    align-items: center;
+    background-color: #64646434;
+    margin: 1em 0em;
+    
+    padding: 1em;
+    border-radius: 0.5em;
+}
+.passo-right{
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.2em;
+    padding: 0.5em;
+    justify-content: center;
+}
+
+.passo-right > strong{
+    color: var(--highlights);
+    text-transform: uppercase;
+}
+
+.examples{
+    display: flex;
+    justify-content: space-between;
+    margin: 30vh 0em;
+}
+
+.ex-left{
+    width: 45vw;
+    display:flex;
+    flex-direction: column;
+}
+
+.output {
+    background-color: var(--background-secondary);
+    border: solid 0.3em #40799e;
+    border-radius: 0.5em;
+    color: #fff;
+    margin-bottom: 1em;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30vw;
+}
+
+.output > h1{
+    font-size: 1.5em;
+    color: var(--text-color-dark);
+}
+
+.output > strong{
+    color: var(--highlights);
+    text-transform: uppercase;
+}
+
+.output > h3{
+    font-size: 1.5em;
+    margin: 0em;
+}
+
+.btn-exercise{
+    width: 30%;
+    font-size: 0.8em;
+    font-weight: 600;
+    padding: 1em;
+    border-radius: 0.5em;
+    border: none;
+    background-color: var(--highlights);
+    color: #000814;
+    cursor: pointer;
+}
+
+.input-exercise{
+    margin:1em 0em;
+    padding: 1em;
+    font-size: 1.2em;
 }
